@@ -11,6 +11,7 @@ interface MoveDelay {
    high?: number;
 }
 // Dummy component used to control the event loop.
+// TODO: Refactor this event loop into Rust backend.
 const Mover: FC<MoverProps> = ({ moveDelay, isMoving}) => {
     useEffect(() => {
         while (isMoving) {
